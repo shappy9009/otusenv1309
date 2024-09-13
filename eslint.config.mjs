@@ -1,8 +1,10 @@
 import globals from "globals";
 import pluginJs from "@eslint/js";
 import jest from "eslint-plugin-jest";
+import eslintRecommended from "eslint-plugin-prettier/recommended";
 
 export default [
+  eslintRecommended,
   {
     languageOptions: {
       globals: globals.browser 
@@ -13,7 +15,6 @@ export default [
       // Ниже свои правила можем добавить/переписать
       "prefer-const": "error",
       "no-unused-vars": "error",
-      "no-console": "error",
       "semi": "error",
     },
   },
